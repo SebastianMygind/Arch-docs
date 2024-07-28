@@ -8,4 +8,5 @@ Follow the arch install guide on the [arch wiki](https://wiki.archlinux.org/titl
 As mentioned before using the systemd-boot bootloader is maybe not the simplest to install, 
 but for maintenance and customization (OF THE BOOT ENTRIES) systemd-boot is a good option.
 
+This install guide is based on [this website](https://www.linuxserver.io/blog/2018-05-17-how-to-configure-systemd-boot)
 
