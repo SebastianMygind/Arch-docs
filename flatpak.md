@@ -62,3 +62,13 @@ Edit the file and change the Exec command:
     X-Flatpak=com.spotify.Client
 
 Here I added the scaling command directly after com.spotify.Client, seperated by only a space.
+
+**Alternative solution**
+
+You can also force spotify to use wayland.
+
+You will stil need to navigate to the .desktop file for spotify, but you must then replace the Exec command with
+
+    flatpak run --branch=stable --socket=wayland --arch=x86_64 --command=/app/extra/bin/spotify --file-forwarding com.spotify.Client --enable-gpu-rasterization --enable-zero-copy --enable-gpu-compositing --enable-native-gpu-memory-buffers --enable-oop-rasterization --enable-features=UseSkiaRenderer --ozone-platform=wayland --disable-gpu-sandbox '--enable-features=UseSkiaRenderer,WaylandWindowDecorations' @@u %U @@
+
+You can remove --disable-gpu-sandbox if you don't have an Nvidia gpu. I.E. you have AMD og Intel.
